@@ -1,0 +1,52 @@
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'app3000/stylee.css' %}" />
+        <script src="{% static 'app3000/scriptt.js' %}" defer></script>
+        <script src = '{% static "app3000/jquery-3.6.4.js" %}' defer></script>
+        <script src = '{% static "app3000/ajax.js" %}' defer></script>
+        <title>COOL-OSAS-APP-3000</title>
+    </head>
+    <body>
+        <input id="url" value="{% url 'page' %}" hidden>
+        <div class="name-div">
+          <h1>COOL-OSAS-APP-3000(hover please)</h1>
+        </div>
+        
+        <div>
+            <div class="movies-div">
+                {% for movie in movies %}
+                    <div class="movie-div">
+                        <img src="{{movie.image.url}}" alt="" />
+                        <div class="name-year">
+                            <p>{{movie.name}}</p>
+                            <p>{{movie.year}}</p>
+                        </div>  
+                        <p>{{movie.discrition}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    
+        <div class="modal-wrapper" hidden>
+            <div class="modal-window">
+              <button class="close-button">❌</button>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input type="" hidden value="{{ csrf_token }}" id="csrf">
+                    <div class="input-div">
+                        <p>Будьласка відправте свій відгук про наш сайт</p>
+                        <input type="text" placeholder="Ім'я" class="input-name" name="name"/>
+                        <input type="text" placeholder="Відгук" class="input-review" name="review"/>
+                        
+                    </div>
+                    
+                </form>
+                <button class="send-button">Відправити</button>
+            </div>
+        </div>
+    </body>
+</html>

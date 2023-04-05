@@ -1,0 +1,161 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-image: url("https://free4kwallpapers.com/uploads/originals/2019/03/13/a-rainy-night-wallpaper.jpg");
+    background-repeat: none;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(228, 34, 253);
+}
+
+.name-div{
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
+    color: rgb(217, 159, 250);
+    transition: 0.1s;
+    font-size: large;
+}
+
+.name-div:hover{
+    width: 100%;
+    margin-left: 0%;
+    color: blueviolet;
+    font-size: xx-large;
+}
+
+.movie-div{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    border: 1px solid rgb(110, 17, 138);
+    border-radius: 30px;
+    background-color: rgba(231, 74, 245, 0.719);
+    width: 80%;
+    margin-left: 10%;
+    padding: 5px;
+    backdrop-filter: blur(3px);
+    font-size: x-large;
+}
+
+.movie-div img{
+    border: 6px double rgb(84, 21, 90);
+    display: flex;
+    width: 20%;
+    border-radius: 30px;
+    margin-left: 40%;
+}
+
+.movie-div .name-year{
+    font-size: xx-large;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 30px;
+    gap: 20%;
+    margin-left: 35%;
+}
+
+.movie-div p{
+    text-align: center;
+}
+
+.movies-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-left: 20%; */
+    gap: 10px;
+}
+
+.modal-window {
+    position: fixed;
+    top: 25%;
+    /* margin-top: 25%; */
+    margin-left: 25%;
+    z-index: 3;
+    height: 30%;
+    width: 50%;
+    border-radius: 30px;
+    border: 2px solid rgb(11, 0, 170);
+    background-color: rgb(30, 78, 238);
+    opacity: 1;
+}
+
+.modal-wrapper{
+    /* display: flex; */
+    position: fixed;
+    width:100%;
+    height:100%;
+    z-index: 2;
+    background-color: rgba(100, 95, 95, 0.616);
+    backdrop-filter: blur(3px);
+    left: 0px;
+    top: 0px;
+    /* opacity: 0.5; */
+}
+
+.input-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(53, 184, 207);
+    margin-top: 15px;
+    margin-left: 20%;
+    border: 2px solid rgb(11, 0, 170);
+    border-radius: 15px;
+    height: 45%;
+    width: 60%;
+    text-align: center;
+
+}
+
+input{
+    background-color: cornsilk;
+    border-radius: 15px;
+    height: 15%;
+    transition: 0.1s;
+}
+input:hover{
+    background-color: rgb(95, 159, 219);
+    border-radius: 10px;
+    height: 20%;
+}
+
+.send-button{
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 15px;
+    border: 1px solid grey;
+    font-size: x-large;
+    background-color: rgb(17, 194, 194);
+    transition: 0.1s;
+}
+
+.send-button:hover{
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    background-color: rgb(58, 180, 180);
+}
+
+.close-button{
+    background-color: aliceblue;
+    margin-left: 90%;
+    width: 6%;
+    height: 10%;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.close-button:hover{
+    margin-left: 0%;
+    background-color: rgb(248, 102, 102);
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
